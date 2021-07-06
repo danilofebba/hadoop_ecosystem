@@ -12,10 +12,10 @@ RUN apt install -y ssh
 RUN ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
-RUN wget --quiet --output-document /tmp/hadoop-3.3.0.tar.gz https://ftp.unicamp.br/pub/apache/hadoop/common/stable/hadoop-3.3.0.tar.gz
-RUN tar -zxvf /tmp/hadoop-3.3.0.tar.gz -C /opt
-RUN mv /opt/hadoop-3.3.0 /opt/hadoop
-RUN rm /tmp/hadoop-3.3.0.tar.gz
+RUN wget --quiet --output-document /tmp/hadoop-3.3.1.tar.gz https://ftp.unicamp.br/pub/apache/hadoop/common/stable/hadoop-3.3.1.tar.gz
+RUN tar -zxvf /tmp/hadoop-3.3.1.tar.gz -C /opt
+RUN mv /opt/hadoop-3.3.1 /opt/hadoop
+RUN rm /tmp/hadoop-3.3.1.tar.gz
 
 ENV HADOOP_HOME=/opt/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
