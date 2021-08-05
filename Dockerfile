@@ -21,10 +21,12 @@ ENV HADOOP_HOME=/opt/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 
-RUN echo "export HDFS_NAMENODE_USER=root" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 RUN echo "export HDFS_DATANODE_USER=root" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+RUN echo "export HADOOP_SECURE_DN_USER=hdfs" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+RUN echo "export HDFS_NAMENODE_USER=root" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 RUN echo "export HDFS_SECONDARYNAMENODE_USER=root" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 RUN echo "export YARN_RESOURCEMANAGER_USER=root" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+RUN echo "export HADOOP_SECURE_DN_USER=yarn" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 RUN echo "export YARN_NODEMANAGER_USER=root" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 
 RUN mkdir -p /data/hdfs/namenode
