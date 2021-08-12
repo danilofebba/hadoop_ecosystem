@@ -23,6 +23,6 @@
     </property>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://192.168.43.2:9000</value>
+        <value>hdfs://dataserver:9000</value>
     </property>
 </configuration>

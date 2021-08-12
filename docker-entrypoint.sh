@@ -1,7 +1,7 @@
 #!/bin/bash
-
-service ssh start
-$HADOOP_HOME/bin/hdfs namenode -format
+sudo service ssh start
+if [ ! -d "/data/hdfs/datanode/current" ]; then
+    $HADOOP_HOME/bin/hdfs namenode -format
+fi
 start-all.sh
-
-bash
+/bin/bash
