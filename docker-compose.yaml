@@ -1,14 +1,15 @@
 version: "3.5"
 services:
 
-  hadoop:
+  dataserver:
     build:
       context: .
       dockerfile: Dockerfile
-    image: hadoop:1.0
-    container_name: hadoop
-    hostname: hadoop
+    image: dataserver:1.0
+    container_name: dataserver
+    hostname: dataserver
     ports:
+      - "8042:8042"
       - "8088:8088"
       - "9000:9000"
       - "9864:9864"
