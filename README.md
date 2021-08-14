@@ -5,7 +5,7 @@ Follow the steps below.
 - [Docker Compose](https://docs.docker.com/engine/install)
 # Run the command lines below
 ``` bash
-$ cd hadoop_ecosystem
 $ git clone https://github.com/danilofebba/hadoop_ecosystem
+$ cd hadoop_ecosystemS
 $ docker-compose up --build
 ```
