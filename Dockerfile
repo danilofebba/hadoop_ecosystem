@@ -23,6 +23,8 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> /opt/hadoop/etc
 
 COPY core-site.xml /opt/hadoop/etc/hadoop
 COPY hdfs-site.xml /opt/hadoop/etc/hadoop
+COPY mapred-site.xml /opt/hadoop/etc/hadoop
+COPY yarn-site.xml /opt/hadoop/etc/hadoop
 COPY docker-entrypoint.sh /opt/hadoop/etc/hadoop
 
 RUN addgroup hadoopgroup
