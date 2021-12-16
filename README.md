@@ -24,4 +24,6 @@ $ docker-compose up --build
 
 
 # Hadoop - Command Lines
+yarn jar /opt/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.1.jar pi 16 100000
+
 - ~/hadoop-3.3.1/bin/hdfs dfs -put ~/Documents/test.csv hdfs://dataserver:9000/warehouse/test.csv
