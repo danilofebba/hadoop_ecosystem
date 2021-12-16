@@ -12,7 +12,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 ```
 ## Configure DNS
 ``` bash
-vim /etc/hosts
+sudo vim /etc/hosts
 192.168.43.2  dataserver
 ```
 ## Run the command lines below
