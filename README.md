@@ -18,7 +18,7 @@ sudo vim /etc/hosts
 ## Run the command lines below
 ``` bash
 $ git clone https://github.com/danilofebba/hadoop_ecosystem
-$ cd hadoop_ecosystemS
+$ cd hadoop_ecosystem
 $ docker-compose up --build
 ```
 
